@@ -1,0 +1,1 @@
+This zip folder contains the report, the sql dump as well as the app.py file for the flask backend, and the requirements.txt file with all the dependancies used.

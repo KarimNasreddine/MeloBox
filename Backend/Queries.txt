@@ -1,0 +1,109 @@
+USE music_streaming;
+-- Insert a new user
+INSERT INTO user (first_name, last_name, email, password, subscription_status, is_admin)
+VALUES ('Tamer', 'Boutros', 'tb@mail.com', '123', true, false);
+
+-- Select all users
+SELECT * FROM user;
+
+-- Select a user by ID
+SELECT * FROM user WHERE user_id = 1;
+
+-- Update a user's email by ID
+UPDATE user SET email = 'newemail@example.com' WHERE user_id = 4;
+
+-- Delete a user by ID
+DELETE FROM user WHERE user_id = 1;
+
+-- Insert a new artist
+INSERT INTO artist (name, popularity_score, genre_id)
+VALUES ('Queen', 90, 1);
+
+-- Select all artists
+SELECT * FROM artist;
+
+-- Select an artist by ID
+SELECT * FROM artist WHERE artist_id = 1;
+
+-- Update an artist's popularity score by ID
+UPDATE artist SET popularity_score = 95 WHERE artist_id = 1;
+
+-- Delete an artist by ID
+DELETE FROM artist WHERE artist_id = 1;
+
+-- Insert a new playlist
+INSERT INTO playlist (name, description, user_id)
+VALUES ('RNB', 'RNB', 1);
+
+-- Select all playlists
+SELECT * FROM playlist;
+
+-- Select a playlist by ID
+SELECT * FROM playlist WHERE playlist_id = 1;
+
+-- Update a playlist's description by ID
+UPDATE playlist SET description = 'RNB' WHERE playlist_id = 1;
+
+-- Delete a playlist by ID
+DELETE FROM playlist WHERE playlist_id = 1;
+
+-- Insert a new track
+INSERT INTO track (title, duration, album_id, genre_id, artist_id)
+VALUES ('Drain', 355, 1, 1, 1);
+
+-- Select all tracks
+SELECT * FROM track;
+
+-- Select a track by ID
+SELECT * FROM track WHERE track_id = 1;
+
+-- Update a track's title by ID
+UPDATE track SET title = 'Drain' WHERE track_id = 4;
+
+-- Delete a track by ID
+DELETE FROM track WHERE track_id = 4;
+
+-- Insert a new album
+INSERT INTO album (name, release_date, artist_id)
+VALUES ('unity 2', '2020-01-01', 1);
+
+-- Select all albums
+SELECT * FROM album;
+
+-- Select an album by ID
+SELECT * FROM album WHERE album_id = 1;
+
+-- Update an album's name by ID
+UPDATE album SET name = 'Afterlife' WHERE album_id = 2;
+
+-- Delete an album by ID
+DELETE FROM album WHERE album_id = 1;
+
+-- Insert a new genre
+INSERT INTO genre (name, description)
+VALUES ('House', 'chill');
+
+-- Select all genres
+SELECT * FROM genre;
+
+-- Select a genre by ID
+SELECT * FROM genre WHERE genre_id = 1;
+
+-- Update a genre's description by ID
+UPDATE genre SET description = 'electro' WHERE genre_id = 1;
+
+-- Delete a genre by ID
+DELETE FROM genre WHERE genre_id = 1;
+
+-- Insert a new track/playlist association
+INSERT INTO track_playlist (playlist_id, track_id)
+VALUES (1, 3);
+
+-- Select all track/playlist associations
+SELECT * FROM track_playlist;
+
+-- Select a track/playlist association by playlist ID
+SELECT * FROM track_playlist WHERE playlist_id = 1;
+
+-- Delete a track/playlist association by playlist and track IDs
+DELETE FROM track_playlist WHERE playlist_id = 1 AND track_id = 1;
